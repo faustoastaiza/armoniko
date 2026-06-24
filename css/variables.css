@@ -1,0 +1,104 @@
+/* =============================================
+   LIVING BY ARMONIKO
+   Design tokens replicating The Charlee's
+   cinematic warm-luxury aesthetic
+   ============================================= */
+
+:root {
+  /* === CORE PALETTE (from The Charlee) === */
+  --cream:         #FAF8EE;  /* main background — warm cream */
+  --cream-soft:    #F8F5F1;  /* alternate section bg */
+  --ink:           #151514;  /* primary text / deep near-black */
+  --ink-soft:      #1A1B1A;  /* body text */
+  --olive:         #68695B;  /* accent — warm olive */
+  --olive-deep:    #424237;  /* accent — dark olive */
+  --terra:         #B46853;  /* accent — warm terracotta */
+  --dark:          #090909;  /* ultra dark (hero overlays, dark sections) */
+
+  /* Semantic */
+  --color-bg:          var(--cream);
+  --color-bg-alt:      var(--cream-soft);
+  --color-bg-dark:     var(--dark);
+  --color-text:        var(--ink-soft);
+  --color-text-dark-bg: var(--cream);
+  --color-text-muted:  rgba(21,21,20,0.6);
+  --color-text-subtle: rgba(21,21,20,0.45);
+  --color-accent:      var(--olive);
+  --color-accent-2:    var(--terra);
+  --color-border:      rgba(21,21,20,0.12);
+  --color-border-dark: rgba(250,248,238,0.12);
+
+  --color-overlay:       rgba(9,9,9,0.35);
+  --color-overlay-heavy: rgba(9,9,9,0.6);
+
+  /* === TYPOGRAPHY === */
+  /* Display serif — Marcellus (The Charlee uses this exactly) */
+  --font-display: 'Marcellus', 'Cormorant Garamond', Georgia, serif;
+  /* Body sans — Jost (The Charlee uses this exactly) */
+  --font-body:    'Jost', system-ui, -apple-system, sans-serif;
+
+  --fs-hero:     clamp(3.5rem, 8vw, 7rem);
+  --fs-display:  clamp(2.8rem, 5.5vw, 4.75rem);
+  --fs-h1:       clamp(2.2rem, 3.6vw, 3rem);
+  --fs-h2:       clamp(1.9rem, 2.8vw, 2.375rem);   /* ~38px */
+  --fs-h3:       clamp(1.4rem, 2vw, 1.75rem);
+  --fs-h4:       clamp(1.1rem, 1.3vw, 1.25rem);
+  --fs-body:     0.9375rem;    /* 15px */
+  --fs-body-lg:  1.0625rem;    /* 17px */
+  --fs-small:    0.8125rem;
+  --fs-tag:      0.75rem;
+
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+
+  --lh-display:  1.05;
+  --lh-heading:  1.2;
+  --lh-body:     1.7;
+
+  --ls-display:  0;
+  --ls-heading:  0;
+  --ls-tag:      0.2em;
+  --ls-wider:    0.25em;
+
+  /* === SPACING === */
+  --space-xs:    0.5rem;
+  --space-sm:    1rem;
+  --space-md:    1.5rem;
+  --space-lg:    2.5rem;
+  --space-xl:    4rem;
+  --space-2xl:   6rem;
+  --space-3xl:   8rem;
+  --space-section: clamp(5rem, 10vw, 8rem);
+
+  /* === LAYOUT === */
+  --container:      1280px;
+  --container-wide: 1440px;
+  --container-narrow: 820px;
+  --gutter:         clamp(1.25rem, 3vw, 2.5rem);
+
+  /* === RADIUS === */
+  --radius-none: 0;
+  --radius-sm:   2px;
+  --radius-pill: 9999px;
+
+  /* === SHADOWS === */
+  --shadow-soft:  0 4px 30px rgba(21,21,20,0.06);
+  --shadow-med:   0 12px 40px rgba(21,21,20,0.12);
+  --shadow-deep:  0 20px 60px rgba(9,9,9,0.3);
+
+  /* === MOTION === */
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-smooth:   cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 0.3s;
+  --duration:      0.6s;
+  --duration-slow: 1s;
+
+  /* === Z-INDEX === */
+  --z-header:  100;
+  --z-overlay: 200;
+  --z-modal:   300;
+  --z-toast:   400;
+}

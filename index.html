@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Living by Armóniko — Hotel Boutique en Laureles, Medellín</title>
+  <meta name="description" content="Hotel boutique de lujo accesible en el corazón de Laureles, Medellín. 14 suites tipo apartamento, 4 restaurantes, rooftop y la mejor hospitalidad.">
+  <meta property="og:title" content="Living by Armóniko — Hotel Boutique en Laureles, Medellín">
+  <meta property="og:description" content="14 suites tipo apartamento en el corazón de Laureles. Lujo cálido, gastronomía integrada y la verdadera Medellín a un paso.">
+  <meta property="og:image" content="img/hotel/hotel-lobby-modelo-lectura-01.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Flatpickr (date picker) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1159909342085786');fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1159909342085786&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- SITE HEAD — Top bar + Navigation             -->
+  <!-- ============================================ -->
+  <header class="site-head">
+
+    <!-- ============================================ -->
+    <!-- PROMO BAR — Mejor precio garantizado         -->
+    <!-- Para activar el 10% off: cambiar             -->
+    <!--   .promo-bar__offer { display: none }        -->
+    <!-- a display: inline-flex en styles.css         -->
+    <!-- (pendiente validación con Laura)             -->
+    <!-- ============================================ -->
+    <div class="promo-bar" id="promoBar" role="banner" aria-label="Oferta especial">
+      <div class="promo-bar__inner">
+        <p class="promo-bar__msg">
+          <span class="promo-bar__diamond" aria-hidden="true">♦</span>
+          Mejor precio garantizado al reservar directo
+          <!-- 10% OFF — activar cuando Laura confirme -->
+          <span class="promo-bar__offer" aria-label="10% de descuento">
+            · 10% off con código <strong>DIRECTO10</strong>
+          </span>
+        </p>
+        <a href="https://wa.link/otwiz2" target="_blank" rel="noopener"
+           class="promo-bar__wa" aria-label="Reservar por WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <button class="promo-bar__close" id="promoBarClose" aria-label="Cerrar barra de oferta">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <div class="topbar__inner">
+        <div class="topbar__left">
+          <span>Circular 75 #38-35 · Laureles, Medellín</span>
+          <span class="topbar__divider"></span>
+          <span>Tel: (604) 429 0110</span>
+          <span class="topbar__divider"></span>
+          <a href="mailto:reservas@livingbyarmoniko.com">reservas@livingbyarmoniko.com</a>
+        </div>
+        <div class="topbar__right">
+          <div class="topbar__socials">
+            <a href="https://instagram.com/livingbyarmoniko" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="https://www.facebook.com/livingbyarmoniko" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://wa.link/otwiz2" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            <a href="https://maps.app.goo.gl/2tqL7MKpeCZeQSSbA" target="_blank" rel="noopener" aria-label="Ubicación"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN NAV -->
+    <nav class="nav">
+      <div class="nav__left">
+        <a href="index.html" class="nav__link">Inicio</a>
+
+        <div class="nav-item">
+          <a href="habitaciones.html" class="nav__link has-dropdown">Suites</a>
+          <div class="nav-item__panel">
+            <a href="habitaciones.html"><span>Todas las suites</span><span class="meta">14</span></a>
+            <a href="suite-deluxe.html"><span>Suite Deluxe</span><span class="meta">62 m²</span></a>
+            <a href="suite-superior.html"><span>Suite Superior</span><span class="meta">32 m²</span></a>
+            <a href="suite-confort.html"><span>Suite Confort</span><span class="meta">27 m²</span></a>
+            <a href="suite-estandar.html"><span>Suite Estándar</span><span class="meta">20 m²</span></a>
+          </div>
+        </div>
+        <a href="servicios.html" class="nav__link">Servicios</a>
+      </div>
+
+      <a href="index.html" class="logo">
+        <img src="img/ARMONIKO_LOGO-01.svg" alt="Living by Armóniko" class="logo__img" width="180" height="48">
+      </a>
+
+      <div class="nav__right">
+        <a href="nosotros.html" class="nav__link">Nosotros</a>
+        <a href="aliados.html" class="nav__link">Aliados</a>
+        <a href="tours.html" class="nav__link">Tours</a>
+        <a href="#reservar" class="nav__cta">Book Now</a>
+        <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu">
+    <a href="index.html">Inicio</a>
+    <a href="habitaciones.html">Suites</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="aliados.html">Aliados</a>
+    <a href="tours.html">Tours</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="#reservar" class="btn btn--light" style="margin-top:1rem;">Book Now</a>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- HERO                                         -->
+  <!-- ============================================ -->
+  <section class="hero" id="reservar">
+    <div class="hero__media">
+      <video
+        class="hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="img/hotel/hotel-lobby-pareja-relojes-01.webp"
+        aria-hidden="true">
+        <source src="img/hero/hotel-hero-video.webm" type="video/webm">
+        <source src="img/hero/hotel-hero-video.mp4" type="video/mp4">
+        <!-- Fallback para navegadores sin soporte de video -->
+        <img src="img/hotel/hotel-lobby-pareja-relojes-01.webp" alt="Living by Armóniko — Hotel Boutique en Laureles" loading="eager">
+      </video>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__title" data-split-words>Un refugio con alma</h1>
+      <p class="hero__subtitle">Hotel Boutique · Laureles, Medellín</p>
+    </div>
+
+    <!-- BOOKING WIDGET (integrated with SiteMinder via Direct-Book) -->
+    <form class="booking-bar" data-booking-form role="search" aria-label="Reservar suite">
+      <div class="booking-field">
+        <label class="booking-field__label" for="ci">Check in</label>
+        <input type="date" id="ci" class="booking-field__input" data-booking-checkin required>
+      </div>
+      <span class="booking-bar__divider"></span>
+      <div class="booking-field">
+        <label class="booking-field__label" for="co">Check out</label>
+        <input type="date" id="co" class="booking-field__input" data-booking-checkout required>
+      </div>
+      <span class="booking-bar__divider"></span>
+      <div class="booking-field">
+        <label class="booking-field__label" for="gg">Huéspedes</label>
+        <select id="gg" class="booking-field__input" data-booking-guests>
+          <option value="1-0">1 adulto</option>
+          <option value="2-0" selected>2 adultos</option>
+          <option value="2-1">2 adultos · 1 niño</option>
+          <option value="2-2">2 adultos · 2 niños</option>
+          <option value="3-0">3 adultos</option>
+          <option value="4-0">4 adultos</option>
+        </select>
+      </div>
+      <button type="submit" class="booking-bar__btn" data-booking-submit>Buscar disponibilidad</button>
+    </form>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- ROOMS — Horizontal strip (AHORA PRIMERO)     -->
+  <!-- ============================================ -->
+  <section class="section section--tight-bottom" style="background: var(--cream-soft);">
+    <div class="container">
+      <div class="rooms-intro reveal">
+        <p class="eyebrow eyebrow--center">Hotel Boutique en Medellín</p>
+        <h2 class="display">Descubre Nuestras Suites</h2>
+        <p style="margin-top:var(--space-md);color:var(--color-text-muted);font-size:var(--fs-body-lg);">En Living by Armóniko ofrecemos una experiencia única con 14 suites tipo apartamento en 4 estilos distintos. Cada detalle está pensado para superar tus expectativas — cocina equipada, balcón privado y la mejor ubicación de Laureles.</p>
+      </div>
+
+      <div class="rooms-strip">
+        <a href="suite-deluxe.html" class="room-card reveal">
+          <div class="room-card__img"><img src="img/suite-deluxe/suite-deluxe-habitacion-cama-arte-mural-02.jpg" alt="Suite Deluxe" loading="lazy"></div>
+          <span class="room-card__arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <div class="room-card__content">
+            <h3 class="room-card__name">Deluxe</h3>
+            <p class="room-card__meta">62 m² · King</p>
+          </div>
+        </a>
+
+        <a href="suite-superior.html" class="room-card reveal">
+          <div class="room-card__img"><img src="img/suite-superior/suite-superior-habitacion-cama-tv-balcon-02.jpg" alt="Suite Superior" loading="lazy"></div>
+          <span class="room-card__arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <div class="room-card__content">
+            <h3 class="room-card__name">Superior</h3>
+            <p class="room-card__meta">32 m² · Queen</p>
+          </div>
+        </a>
+
+        <a href="suite-confort.html" class="room-card reveal">
+          <div class="room-card__img"><img src="img/suite-confort/suite-confort-habitacion-05.jpg" alt="Suite Confort" loading="lazy"></div>
+          <span class="room-card__arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <div class="room-card__content">
+            <h3 class="room-card__name">Confort</h3>
+            <p class="room-card__meta">27 m² · Queen</p>
+          </div>
+        </a>
+
+        <a href="suite-estandar.html" class="room-card reveal">
+          <div class="room-card__img"><img src="img/suite-estandar/suite-estandar-habitacion-cama-cocina-02.webp" alt="Suite Estándar" loading="lazy"></div>
+          <span class="room-card__arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          <div class="room-card__content">
+            <h3 class="room-card__name">Estándar</h3>
+            <p class="room-card__meta">20 m² · Queen</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- INTRO — "¿Quién es Living by Armóniko?" (AHORA SEGUNDO) -->
+  <!-- ============================================ -->
+  <section class="section section--tight-top">
+    <div class="container">
+      <div class="split">
+        <div class="split__text reveal-left">
+          <p class="eyebrow">El refugio perfecto en Laureles</p>
+          <h2 class="display" style="margin-bottom:var(--space-md);">¿Quién es Living by Armóniko?</h2>
+          <p>Living by Armóniko nació del convencimiento de que la hospitalidad se siente, no se recita. Es ese lugar al que llegas buscando descanso y te llevas algo más: la sensación de que alguien pensó en ti antes de que llegaras.</p>
+          <p>14 suites tipo apartamento en el corazón de Laureles, con cocina, balcón y luz natural. Integrado con <strong>4 experiencias gastronómicas dentro del mismo hotel</strong>, donde espacios como el rooftop y el coworking hacen parte natural de esta propuesta. Living by Armóniko personifica una filosofía de vida fundamentada en sus pilares: Diseño, Gastronomía, Cultura y Bienestar.</p>
+          <a href="nosotros.html" class="link-underline">Comienza a explorar</a>
+        </div>
+        <div class="split__image reveal-right">
+          <img src="img/hotel/hotel-lobby-pareja-relojes-01.webp" alt="Lobby de Living by Armóniko con relojes del mundo" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FEATURE 1 — ROOFTOP                          -->
+  <!-- ============================================ -->
+  <section class="feature">
+    <div class="feature__inner">
+      <div class="feature__media">
+        <img src="img/hotel/hotel-restaurante-rooftop-bar-02.webp" alt="Rooftop con vistas panorámicas de Medellín" loading="lazy">
+      </div>
+      <div class="feature__body reveal-right">
+        <p class="eyebrow eyebrow--light">Único en su tipo</p>
+        <h2 class="feature__title">Rooftop con vista a Laureles</h2>
+        <p class="feature__text">Ubicado en el piso más alto del edificio Armóniko, nuestro rooftop te invita a contemplar Laureles desde una perspectiva diferente. Disfruta de una vista panorámica impresionante mientras experimentas un ambiente sereno y moderno — ideal desde el café de la mañana hasta el último coctel de la noche.</p>
+        <div class="feature__meta">
+          <a href="mailto:reservas@livingbyarmoniko.com">reservas@livingbyarmoniko.com</a>
+          <a href="tel:+573011432786">+57 301 143 2786</a>
+        </div>
+        <div class="feature__actions">
+          <a href="servicios.html" class="btn btn--light">Más información</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FEATURE 2 — BOTSWANA                         -->
+  <!-- ============================================ -->
+  <section class="feature feature--light">
+    <div class="feature__inner feature__inner--reverse">
+      <div class="feature__media">
+        <img src="img/hotel/hotel-balcon-desayuno-cafe-01.webp" alt="Cappuccino en Botswana Café Bar" loading="lazy">
+      </div>
+      <div class="feature__body reveal-left">
+        <p class="eyebrow">Brunch todo el día en Laureles</p>
+        <h2 class="feature__title">Botswana Café Bar</h2>
+        <p class="feature__text">En el primer piso del edificio Armóniko, Botswana es el lugar ideal para comenzar cada día sin apuro. Un menú que abarca desde desayunos energizantes hasta cenas memorables, con café de especialidad, brunch de autor y una coctelería creativa que fusiona sabores internacionales con ingredientes frescos de Colombia.</p>
+        <div class="feature__meta">
+          <a href="https://instagram.com/botswanacafe" target="_blank" rel="noopener">@botswanacafe</a>
+          <a href="tel:+576044290110">(604) 429 0110 ext. 6010</a>
+        </div>
+        <div class="feature__actions">
+          <a href="servicios.html" class="btn">Más información</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FEATURE 3 — 123 WOK                          -->
+  <!-- ============================================ -->
+  <section class="feature">
+    <div class="feature__inner">
+      <div class="feature__media">
+        <img src="img/hotel/hotel-restaurante-rooftop-bar-04.webp" alt="123 Wok — Cocina asiática de fusión" loading="lazy">
+      </div>
+      <div class="feature__body reveal-right">
+        <p class="eyebrow eyebrow--light">Cocina asiática de autor</p>
+        <h2 class="feature__title">123 Wok</h2>
+        <p class="feature__text">Aromas y texturas de oriente, reimaginados con productos locales. Cada plato es un viaje lleno de color, especias y el equilibrio perfecto entre lo conocido y lo sorprendente. Una fusión asiática que combina frescura y sabor en cada bocado.</p>
+        <div class="feature__actions">
+          <a href="servicios.html" class="btn btn--light">Explorar gastronomía</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- COMODIDADES (antes Amenidades)                -->
+  <!-- ============================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="rooms-intro reveal">
+        <p class="eyebrow eyebrow--center">Todo lo que necesitas</p>
+        <h2 class="display">Comodidades</h2>
+      </div>
+
+      <div class="amenities-row">
+        <!-- Ubicación -->
+        <div class="amenity reveal">
+          <div class="amenity__icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h4 class="amenity__title">Ubicación</h4>
+          <p class="amenity__text">Segundo Parque de Laureles</p>
+        </div>
+        <!-- Rooftop -->
+        <div class="amenity reveal">
+          <div class="amenity__icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M3 7v14M21 7v14M6 7V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v3"/></svg></div>
+          <h4 class="amenity__title">Rooftop</h4>
+          <p class="amenity__text">Vistas panorámicas con Rocoto</p>
+        </div>
+        <!-- Parqueadero -->
+        <div class="amenity reveal">
+          <div class="amenity__icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <h4 class="amenity__title">Parqueadero</h4>
+          <p class="amenity__text">Vertical de última generación</p>
+        </div>
+        <!-- Desayuno -->
+        <div class="amenity reveal">
+          <div class="amenity__icon"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+          <h4 class="amenity__title">Desayuno incluido</h4>
+          <p class="amenity__text">A la carta en Botswana Café</p>
+        </div>
+        <!-- WiFi -->
+        <div class="amenity reveal">
+          <div class="amenity__icon"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
+          <h4 class="amenity__title">WiFi alta velocidad</h4>
+          <p class="amenity__text">Conectado en cada rincón</p>
+        </div>
+        <!-- 4 restaurantes -->
+        <div class="amenity reveal">
+          <div class="amenity__icon"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+          <h4 class="amenity__title">4 restaurantes</h4>
+          <p class="amenity__text">Gastronomía integrada al hotel</p>
+        </div>
+        <!-- Consigna de equipaje -->
+        <div class="amenity reveal">
+          <div class="amenity__icon"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="3" y1="13" x2="21" y2="13"/></svg></div>
+          <h4 class="amenity__title">Consigna de equipaje</h4>
+          <p class="amenity__text">Antes del check-in y después del check-out</p>
+        </div>
+        <!-- Traslado al aeropuerto -->
+        <div class="amenity reveal">
+          <div class="amenity__icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <h4 class="amenity__title">Traslado al aeropuerto</h4>
+          <p class="amenity__text">Coordinado bajo solicitud previa</p>
+        </div>
+        <!-- Atención personalizada -->
+        <div class="amenity reveal">
+          <div class="amenity__icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <h4 class="amenity__title">Atención personalizada</h4>
+          <p class="amenity__text">Asistencia preferencial durante tu estadía</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- GOOGLE REVIEWS (auto-loads from Places API)  -->
+  <!-- ============================================ -->
+  <section class="section reviews">
+    <div class="container">
+      <div id="google-reviews"
+           data-place-id="ChIJXXXXXXXXXXXXXXXXXX"
+           class="google-reviews reveal">
+
+        <div class="google-reviews__header">
+          <p class="google-reviews__brand">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.6 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/>
+              <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 16 18.9 13 24 13c3.1 0 5.8 1.2 8 3l5.7-5.7C34 7.1 29.3 5 24 5 16.3 5 9.7 9.3 6.3 14.7z"/>
+              <path fill="#4CAF50" d="M24 44c5.2 0 9.8-2 13.4-5.2l-6.2-5.2c-2 1.5-4.5 2.4-7.2 2.4-5.2 0-9.5-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/>
+              <path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.4-2.4 4.5-4.5 5.9l6.2 5.2c-.4.4 6.6-4.9 6.6-15.2 0-1.3-.1-2.6-.4-3.9z"/>
+            </svg>
+            Reseñas verificadas de Google
+          </p>
+
+          <div class="google-reviews__rating">
+            <span class="google-reviews__score" data-gr-score>4.8</span>
+            <div class="google-reviews__stars-wrap">
+              <div class="google-reviews__stars" data-gr-stars>★★★★★</div>
+              <p class="google-reviews__count" data-gr-count>183+ reseñas en Google</p>
+            </div>
+          </div>
+
+          <a href="https://maps.app.goo.gl/2tqL7MKpeCZeQSSbA" target="_blank" rel="noopener" data-gr-link class="link-underline google-reviews__cta">Ver todas en Google</a>
+        </div>
+
+        <div class="google-reviews__scroll">
+          <!-- Static fallback cards — replaced by Google data when API loads. Sorted 5★ first. -->
+          <div class="google-reviews__track" data-gr-track>
+            <article class="review--google reveal">
+              <svg class="review--google__gmark" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.6 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 16 18.9 13 24 13c3.1 0 5.8 1.2 8 3l5.7-5.7C34 7.1 29.3 5 24 5 16.3 5 9.7 9.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.8-2 13.4-5.2l-6.2-5.2c-2 1.5-4.5 2.4-7.2 2.4-5.2 0-9.5-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.4-2.4 4.5-4.5 5.9l6.2 5.2c-.4.4 6.6-4.9 6.6-15.2 0-1.3-.1-2.6-.4-3.9z"/></svg>
+              <header class="review--google__header">
+                <div class="review--google__avatar">D</div>
+                <div class="review--google__info">
+                  <p class="review--google__name">Darlin M.</p>
+                  <p class="review--google__date">hace 2 meses</p>
+                </div>
+              </header>
+              <div class="review--google__stars">★★★★★</div>
+              <p class="review--google__text">Excelente atención, las habitaciones súper cómodas y tranquilas. Muy buena ubicación en Laureles, cerca de todo. El desayuno sorprendentemente rico y el equipo siempre atento.</p>
+            </article>
+
+            <article class="review--google reveal">
+              <svg class="review--google__gmark" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.6 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 16 18.9 13 24 13c3.1 0 5.8 1.2 8 3l5.7-5.7C34 7.1 29.3 5 24 5 16.3 5 9.7 9.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.8-2 13.4-5.2l-6.2-5.2c-2 1.5-4.5 2.4-7.2 2.4-5.2 0-9.5-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.4-2.4 4.5-4.5 5.9l6.2 5.2c-.4.4 6.6-4.9 6.6-15.2 0-1.3-.1-2.6-.4-3.9z"/></svg>
+              <header class="review--google__header">
+                <div class="review--google__avatar">L</div>
+                <div class="review--google__info">
+                  <p class="review--google__name">Laura H.</p>
+                  <p class="review--google__date">hace 3 meses</p>
+                </div>
+              </header>
+              <div class="review--google__stars">★★★★★</div>
+              <p class="review--google__text">Qué hotel tan lindo, desde que llegas te reciben muy amables. Los desayunos de otro nivel, las habitaciones impecables y el rooftop increíble. Volveremos pronto.</p>
+            </article>
+
+            <article class="review--google reveal">
+              <svg class="review--google__gmark" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.6 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 16 18.9 13 24 13c3.1 0 5.8 1.2 8 3l5.7-5.7C34 7.1 29.3 5 24 5 16.3 5 9.7 9.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.8-2 13.4-5.2l-6.2-5.2c-2 1.5-4.5 2.4-7.2 2.4-5.2 0-9.5-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.4-2.4 4.5-4.5 5.9l6.2 5.2c-.4.4 6.6-4.9 6.6-15.2 0-1.3-.1-2.6-.4-3.9z"/></svg>
+              <header class="review--google__header">
+                <div class="review--google__avatar">A</div>
+                <div class="review--google__info">
+                  <p class="review--google__name">Andrew S.</p>
+                  <p class="review--google__date">hace 1 mes</p>
+                </div>
+              </header>
+              <div class="review--google__stars">★★★★★</div>
+              <p class="review--google__text">The location in Laureles is excellent, far preferable to the concrete cages of Poblado. Quiet, great restaurants walking distance, and a truly warm staff. Highly recommend.</p>
+            </article>
+
+            <article class="review--google reveal">
+              <svg class="review--google__gmark" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.6 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 16 18.9 13 24 13c3.1 0 5.8 1.2 8 3l5.7-5.7C34 7.1 29.3 5 24 5 16.3 5 9.7 9.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.8-2 13.4-5.2l-6.2-5.2c-2 1.5-4.5 2.4-7.2 2.4-5.2 0-9.5-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.4-2.4 4.5-4.5 5.9l6.2 5.2c-.4.4 6.6-4.9 6.6-15.2 0-1.3-.1-2.6-.4-3.9z"/></svg>
+              <header class="review--google__header">
+                <div class="review--google__avatar">C</div>
+                <div class="review--google__info">
+                  <p class="review--google__name">Camila R.</p>
+                  <p class="review--google__date">hace 4 meses</p>
+                </div>
+              </header>
+              <div class="review--google__stars">★★★★★</div>
+              <p class="review--google__text">La experiencia fue increíble. El desayuno que sirven en Botswana Café está delicioso y el servicio es de primera. Las suites tienen cocina, lo cual es una ventaja enorme si vas a quedarte varios días.</p>
+            </article>
+
+            <article class="review--google reveal">
+              <svg class="review--google__gmark" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.6 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 16 18.9 13 24 13c3.1 0 5.8 1.2 8 3l5.7-5.7C34 7.1 29.3 5 24 5 16.3 5 9.7 9.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.8-2 13.4-5.2l-6.2-5.2c-2 1.5-4.5 2.4-7.2 2.4-5.2 0-9.5-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.4-2.4 4.5-4.5 5.9l6.2 5.2c-.4.4 6.6-4.9 6.6-15.2 0-1.3-.1-2.6-.4-3.9z"/></svg>
+              <header class="review--google__header">
+                <div class="review--google__avatar">M</div>
+                <div class="review--google__info">
+                  <p class="review--google__name">Martín V.</p>
+                  <p class="review--google__date">hace 2 meses</p>
+                </div>
+              </header>
+              <div class="review--google__stars">★★★★★</div>
+              <p class="review--google__text">Laureles es mucho mejor que El Poblado para vivir la Medellín real. Living by Armóniko tiene el balance perfecto: tranquilo, diseño cuidado, servicio personalizado y excelentes restaurantes integrados.</p>
+            </article>
+
+            <article class="review--google reveal">
+              <svg class="review--google__gmark" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.6 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 16 18.9 13 24 13c3.1 0 5.8 1.2 8 3l5.7-5.7C34 7.1 29.3 5 24 5 16.3 5 9.7 9.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.8-2 13.4-5.2l-6.2-5.2c-2 1.5-4.5 2.4-7.2 2.4-5.2 0-9.5-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.4-2.4 4.5-4.5 5.9l6.2 5.2c-.4.4 6.6-4.9 6.6-15.2 0-1.3-.1-2.6-.4-3.9z"/></svg>
+              <header class="review--google__header">
+                <div class="review--google__avatar">S</div>
+                <div class="review--google__info">
+                  <p class="review--google__name">Sofía P.</p>
+                  <p class="review--google__date">hace 5 meses</p>
+                </div>
+              </header>
+              <div class="review--google__stars">★★★★★</div>
+              <p class="review--google__text">Hospedaje perfecto para escaparse unos días. Nuestro cuarto tenía balcón con vista hermosa, cocina equipada y una cama súper cómoda. El parqueadero vertical fue un plus enorme.</p>
+            </article>
+          </div>
+          <p class="google-reviews__loading" data-gr-loading style="display:none;">Cargando reseñas verificadas<span class="dots"></span></p>
+        </div>
+
+        <!-- Carousel controls -->
+        <div class="reviews-carousel-controls">
+          <button class="reviews-carousel-btn reviews-carousel-btn--prev" aria-label="Reseñas anteriores">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="reviews-carousel-dots"></div>
+          <button class="reviews-carousel-btn reviews-carousel-btn--next" aria-label="Siguientes reseñas">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- PHOTO GALLERY — Masonry + Lightbox           -->
+  <!-- ============================================ -->
+  <section class="gallery-section">
+    <div class="container-wide" style="padding: 0 var(--gutter);">
+      <div class="gallery-section__header reveal">
+        <p class="eyebrow eyebrow--center">Galería de imágenes</p>
+        <h2 class="display">Conoce Cada Rincón</h2>
+        <p style="margin-top:var(--space-md);color:var(--color-text-muted);font-size:var(--fs-body-lg);max-width:600px;margin-left:auto;margin-right:auto;">Haz clic en cualquier imagen para verla en tamaño completo y explorar todos los espacios de Living by Armóniko.</p>
+      </div>
+
+      <!-- Rail horizontal 2 filas con scroll -->
+      <div class="gallery-rail" data-gallery-rail>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-suite-deluxe-cama-escritorio.webp" alt="Suite Deluxe con cama king, escritorio y arte en macramé" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-rocoto-mural-pez.webp" alt="Restaurante Rocoto con mural de pez en Living by Armóniko" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-huesped-silla-colgante-relax.webp" alt="Huésped relajándose en silla colgante de Living by Armóniko" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-suite-cama-estanteria-balcon.webp" alt="Suite con cama, estantería divisoria y balcón" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-gastronomia-plato-gourmet.webp" alt="Plato gourmet de la gastronomía de Living by Armóniko" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-suite-luna-arte-dorado.webp" alt="Suite con arte dorado tipo luna sobre la cabecera" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-balcon-desayuno-jugo-naranja.webp" alt="Desayuno con jugo de naranja en el balcón" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-restaurante-pared-ladrillo.webp" alt="Restaurante con pared de ladrillo y diseño de autor" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-suite-cama-tv-sala-balcon.webp" alt="Suite con cama, TV, sala de estar y balcón" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-coworking-balcon-jardin-vertical.webp" alt="Espacio para trabajar en balcón con jardín vertical" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-torrealta-cerveceria-social.webp" alt="Ambiente social en Torrealta Cervecería" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-suite-cama-balcon-plantas.webp" alt="Suite con cama, balcón y plantas naturales" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-gastronomia-plato-asiatico.webp" alt="Plato asiático de autor en 123 Wok" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-lobby-relojes-mundo.webp" alt="Lobby con relojes de ciudades del mundo en Living by Armóniko" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-suite-apartamento-cocina.webp" alt="Suite tipo apartamento con cocina kitchenette equipada" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-huesped-cama-cafe-manana.webp" alt="Huésped disfrutando café en la cama por la mañana" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-123wok-interior-madera.webp" alt="Interior de 123 Wok con diseño en madera" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-torrealta-cerveza-artesanal.webp" alt="Cerveza artesanal Torrealta servida en copa" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-pareja-restaurante-alma.webp" alt="Pareja en el restaurante junto al mural lo que toca el alma no se olvida" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+        <div class="gallery-item"><img src="img/homegallery/living-by-armoniko-galeria-detalle-botero-arte.webp" alt="Detalle decorativo con arte de Botero en Living by Armóniko" loading="lazy"><div class="gallery-item__overlay"><div class="gallery-item__icon"><svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- LOCATION — Google Maps + Puntos de interés   -->
+  <!-- ============================================ -->
+  <section class="location-section">
+    <div class="location-section__inner">
+      <div class="location-section__info reveal-left">
+        <p class="eyebrow">Segundo Parque de Laureles</p>
+        <h2 class="display">En el corazón del barrio</h2>
+        <p style="font-size:var(--fs-body-lg);color:var(--color-text);margin-bottom:var(--space-md);">Circular 75 #38-35 — una dirección que lo tiene todo a un paso. Laureles auténtico, sin el ruido de Poblado, con todo lo que necesitas cerca.</p>
+
+        <div class="location-proximity">
+          <div class="location-proximity__item">
+            <div class="location-proximity__icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <span class="location-proximity__label">Segundo Parque de Laureles</span>
+            <span class="location-proximity__time">al frente</span>
+          </div>
+          <div class="location-proximity__item">
+            <div class="location-proximity__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <span class="location-proximity__label">Plaza Mayor Medellín</span>
+            <span class="location-proximity__time">10 min</span>
+          </div>
+          <div class="location-proximity__item">
+            <div class="location-proximity__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <span class="location-proximity__label">Estadio Atanasio Girardot</span>
+            <span class="location-proximity__time">9 min</span>
+          </div>
+          <div class="location-proximity__item">
+            <div class="location-proximity__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <span class="location-proximity__label">La Macarena</span>
+            <span class="location-proximity__time">13 min</span>
+          </div>
+          <div class="location-proximity__item">
+            <div class="location-proximity__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <span class="location-proximity__label">El Poblado / Provenza</span>
+            <span class="location-proximity__time">20 min</span>
+          </div>
+        </div>
+
+        <a href="https://maps.app.goo.gl/2tqL7MKpeCZeQSSbA" target="_blank" rel="noopener" class="btn btn--filled" style="align-self:flex-start;margin-top:var(--space-sm);">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Abrir en Google Maps
+        </a>
+      </div>
+
+      <div class="location-section__map">
+        <iframe
+          src="https://maps.google.com/maps?q=Circular+75+%2338-35,+Laureles,+Medell%C3%ADn,+Colombia&output=embed&z=17"
+          width="100%"
+          height="100%"
+          style="border:0;display:block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de Living by Armóniko en Laureles, Medellín">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CTA                                          -->
+  <!-- ============================================ -->
+  <section class="cta">
+    <div class="cta__media">
+      <img src="img/hotel/hotel-balcon-modelo-relax-01.webp" alt="Huésped en balcón de Living by Armóniko">
+    </div>
+    <div class="cta__content reveal">
+      <p class="eyebrow eyebrow--center eyebrow--light" style="color:var(--cream);">Reserva directa</p>
+      <h2 class="cta__title">Tu próxima historia empieza aquí</h2>
+      <a href="#reservar" class="btn btn--light">Reservar ahora</a>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="footer">
+    <div class="container container-wide">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">Armóniko</div>
+          <p class="footer__tagline">Hotel boutique en el corazón de Laureles donde la hospitalidad se siente, no se describe. 14 suites, 4 restaurantes y la verdadera Medellín.</p>
+          <div class="footer__socials">
+            <a href="https://instagram.com/livingbyarmoniko" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.668.072 4.948c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.668-.014 4.948-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="https://www.facebook.com/livingbyarmoniko" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://wa.link/otwiz2" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h5 class="footer__heading">Explora</h5>
+          <div class="footer__links">
+            <a href="habitaciones.html" class="footer__link">Suites</a>
+            <a href="servicios.html" class="footer__link">Servicios</a><a href="aliados.html" class="footer__link">Aliados</a><a href="tours.html" class="footer__link">Tours</a>
+            <a href="nosotros.html" class="footer__link">Nosotros</a>
+          </div>
+        </div>
+
+        <div>
+          <h5 class="footer__heading">Suites</h5>
+          <div class="footer__links">
+            <a href="suite-deluxe.html" class="footer__link">Suite Deluxe</a>
+            <a href="suite-superior.html" class="footer__link">Suite Superior</a>
+            <a href="suite-confort.html" class="footer__link">Suite Confort</a>
+            <a href="suite-estandar.html" class="footer__link">Suite Estándar</a>
+          </div>
+        </div>
+
+        <div>
+          <h5 class="footer__heading">Contacto</h5>
+          <div class="footer__contact-row"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:reservas@livingbyarmoniko.com">reservas@livingbyarmoniko.com</a></div>
+          <div class="footer__contact-row"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>(+57) 301 143 2786</span></div>
+          <div class="footer__contact-row"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Circular 75 #38-35, Laureles, Medellín</span></div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 Living by Armóniko · RNT: 146593</span>
+        <div style="display:flex;gap:1.5rem;align-items:center;">
+          <a href="politicas-de-privacidad.html">Políticas de privacidad</a>
+          <a href="https://maps.app.goo.gl/2tqL7MKpeCZeQSSbA" target="_blank" rel="noopener">Ver en Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================ -->
+  <!-- LIGHTBOX — para galería masonry del home     -->
+  <!-- ============================================ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Galería ampliada">
+    <button class="lightbox__close" aria-label="Cerrar galería">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Imagen anterior">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Imagen siguiente">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <figure class="lightbox__stage">
+      <img class="lightbox__img" alt="">
+      <figcaption class="lightbox__caption">
+        <span class="lightbox__caption-text"></span>
+        <span class="lightbox__counter"></span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- WhatsApp float -->
+  <a href="https://wa.link/otwiz2" target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Flatpickr date picker (~10KB gz) -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <!--
+    ╔════════════════════════════════════════════════════════════════╗
+    ║  GOOGLE REVIEWS — Configuración                                ║
+    ║                                                                ║
+    ║  Para activar la carga automática de reseñas reales:           ║
+    ║  1. Crea una API Key en Google Cloud Console                   ║
+    ║     → https://console.cloud.google.com/apis/credentials        ║
+    ║  2. Habilita "Places API" y "Maps JavaScript API"              ║
+    ║  3. Restringe la Key a tu dominio (livingbyarmoniko.com)       ║
+    ║  4. Obtén el Place ID del hotel aquí:                          ║
+    ║     → https://developers.google.com/maps/documentation/places/web-service/place-id ║
+    ║  5. Reemplaza YOUR_API_KEY y el data-place-id arriba.          ║
+    ║                                                                ║
+    ║  Mientras no estén configurados, se muestran las reseñas       ║
+    ║  estáticas de fallback (sigue siendo 100% funcional).          ║
+    ╚════════════════════════════════════════════════════════════════╝
+  -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initGoogleReviews&loading=async">
+  </script>
+</body>
+</html>

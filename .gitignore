@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Claude Code — config local (no compartir)
+.claude/
+
+# Backups / archivos comprimidos locales
+Archivo.zip
+*.zip
+
+# Logs / temporales
+*.log
+node_modules/
+.cache/
+tmp/
