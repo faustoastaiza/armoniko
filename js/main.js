@@ -200,12 +200,19 @@ document.addEventListener('DOMContentLoaded', () => {
       mmenu.classList.toggle('active');
       document.body.style.overflow = mmenu.classList.contains('active') ? 'hidden' : '';
     };
+    const close = () => {
+      burger.classList.remove('active');
+      mmenu.classList.remove('active');
+      document.body.style.overflow = '';
+    };
     burger.addEventListener('click', toggle);
-    mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      if (mmenu.classList.contains('active')) toggle();
-    }));
+    // Botón × de cerrar dentro del overlay
+    const closeBtn = mmenu.querySelector('.mobile-menu__close');
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    // Cerrar al tocar cualquier enlace
+    mmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mmenu.classList.contains('active')) toggle();
+      if (e.key === 'Escape' && mmenu.classList.contains('active')) close();
     });
   }
 

@@ -563,6 +563,40 @@ p { line-height: var(--lh-body); }
 
 .mobile-menu.active { opacity: 1; visibility: visible; }
 
+/* Botón × de cerrar — siempre visible dentro del overlay */
+.mobile-menu__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(250,248,238,0.5);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--duration-fast), border-color var(--duration-fast), transform var(--duration-fast);
+  z-index: 1;
+}
+
+.mobile-menu__close:hover {
+  background: rgba(250,248,238,0.12);
+  border-color: var(--cream);
+  transform: rotate(90deg);
+}
+
+.mobile-menu__close svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.6;
+  display: block;
+}
+
 .mobile-menu a {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 4vw, 2.2rem);
@@ -2143,9 +2177,125 @@ body.lightbox-open { overflow: hidden; }
   transition: transform var(--duration-fast);
 }
 
-.wa-float:hover { transform: scale(1.08); }
+.wa-float svg { width: 28px; height: 28px; fill: #fff; position: relative; z-index: 1; }
 
-.wa-float svg { width: 28px; height: 28px; fill: #fff; }
+/* El botón rebota/crece para llamar la atención */
+.wa-float { animation: waBounce 3.4s var(--ease-in-out) infinite; }
+.wa-float:hover { animation-play-state: paused; transform: scale(1.1); }
+
+@keyframes waBounce {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.12); }
+}
+
+/* Anillo de pulso continuo detrás del botón */
+.wa-float::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #25D366;
+  z-index: 0;
+  animation: waPulse 2.4s var(--ease-out) infinite;
+}
+
+@keyframes waPulse {
+  0%   { transform: scale(1);   opacity: 0.55; }
+  70%  { transform: scale(1.9); opacity: 0; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+
+/* Card de asesora que "crece" desde el botón periódicamente */
+.wa-float__label {
+  position: absolute;
+  right: calc(100% + 16px);
+  top: 50%;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: max-content;
+  max-width: 270px;
+  padding: 0.55rem 1rem 0.55rem 0.55rem;
+  background: var(--cream);
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(9,9,9,0.24);
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: right center;
+  transform: translateY(-50%) scale(0.5);
+  animation: waCardLoop 16s var(--ease-out) 2.5s infinite;
+}
+
+/* Avatar circular de la asesora */
+.wa-float__avatar {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(9,9,9,0.12);
+}
+.wa-float__avatar svg { width: 100%; height: 100%; display: block; position: static; }
+
+/* Texto del mensaje (dos líneas) */
+.wa-float__msg {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  line-height: 1.25;
+  color: var(--color-text-muted);
+  text-align: left;
+}
+.wa-float__msg strong {
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: var(--fw-semibold);
+}
+
+/* colita del card apuntando al botón */
+.wa-float__label::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background: var(--cream);
+  transform: translateY(-50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+@keyframes waCardLoop {
+  0%   { opacity: 0; transform: translateY(-50%) scale(0.5); }
+  4%   { opacity: 1; transform: translateY(-50%) scale(1); }
+  33%  { opacity: 1; transform: translateY(-50%) scale(1); }
+  38%  { opacity: 0; transform: translateY(-50%) scale(0.5); }
+  100% { opacity: 0; transform: translateY(-50%) scale(0.5); }
+}
+
+/* Al pasar el mouse por el botón, el card se mantiene visible */
+.wa-float:hover .wa-float__label {
+  animation: none;
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+/* En pantallas muy pequeñas, card un poco más compacto */
+@media (max-width: 420px) {
+  .wa-float__label { max-width: 210px; padding: 0.5rem 0.85rem 0.5rem 0.5rem; }
+  .wa-float__avatar { width: 40px; height: 40px; }
+  .wa-float__msg { font-size: 0.7rem; }
+  .wa-float__msg strong { font-size: 0.8rem; }
+}
+
+/* Respeta usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .wa-float, .wa-float::before, .wa-float__label { animation: none; }
+  .wa-float__label { opacity: 0; }
+  .wa-float:hover .wa-float__label { opacity: 1; transform: translateY(-50%) scale(1); }
+}
 
 /* ---------- REVEAL ANIMATIONS ---------- */
 .reveal {
