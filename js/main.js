@@ -37,13 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.hero');
   if (hero) requestAnimationFrame(() => hero.classList.add('loaded'));
 
-  // ========== WORD-BY-WORD ANIMATION ==========
+  // ========== SPLIT TEXT (estilo React Bits / GSAP SplitText) ==========
+  // Split por caracteres: cada uno entra con opacity 0→1 + y:40→0, en stagger.
+  // Réplica vanilla del componente SplitText (sin React/GSAP).
   document.querySelectorAll('[data-split-words]').forEach(el => {
-    const txt = el.textContent.trim();
-    const parts = txt.split(/\s+/);
-    el.innerHTML = parts.map((w, i) =>
-      `<span class="word" style="animation-delay:${0.35 + i * 0.11}s">${w}</span>`
-    ).join(' ');
+    const text = el.textContent.trim();
+    el.setAttribute('aria-label', text);      // accesible: el lector lee el texto completo
+    const words = text.split(/\s+/);
+    let i = 0;
+    el.innerHTML = words.map(word => {
+      const chars = [...word].map(ch => {
+        const delay = (0.3 + i * 0.04).toFixed(3);   // delay inicial 0.3s + stagger 40ms/char
+        i++;
+        return `<span class="split-char" style="animation-delay:${delay}s" aria-hidden="true">${ch}</span>`;
+      }).join('');
+      return `<span class="split-word">${chars}</span>`;
+    }).join(' ');
   });
 
   // ========== SCROLL REVEAL ==========
@@ -580,6 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const $dur      = tourModal.querySelector('[data-modal-duration]');
     const $sched    = tourModal.querySelector('[data-modal-schedule]');
     const $includes = tourModal.querySelector('[data-modal-includes]');
+    const $cta      = tourModal.querySelector('.tour-modal__body .btn--terra');
     const $close    = tourModal.querySelector('.tour-modal__close');
 
     const openTour = (slug) => {
@@ -593,6 +603,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if ($dur)      $dur.textContent = t.duration;
       if ($sched)    $sched.textContent = t.schedule;
       if ($includes) $includes.innerHTML = t.includes.map(i => `<li>${i}</li>`).join('');
+      // Mensaje de WhatsApp contextual según el tour abierto
+      if ($cta) $cta.href = 'https://wa.me/573011432786?text=' +
+        encodeURIComponent('Hola, vi en su web el ' + t.title + ' y me gustaría tener más información.');
       tourModal.classList.add('is-open');
       tourModal.setAttribute('aria-hidden', 'false');
       document.body.classList.add('tour-modal-open');

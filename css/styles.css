@@ -691,15 +691,27 @@ p { line-height: var(--lh-body); }
   margin-bottom: var(--space-md);
 }
 
-.hero__title .word {
+/* SplitText — entrada por caracteres (réplica del componente de React Bits) */
+.split-word {
   display: inline-block;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: heroWord 0.9s var(--ease-out) forwards;
+  white-space: nowrap;   /* mantiene cada palabra unida al envolver líneas */
 }
 
-@keyframes heroWord {
+.split-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px);
+  /* ease tipo GSAP power3.out */
+  animation: splitCharIn 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes splitCharIn {
   to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .split-char { animation: none; opacity: 1; transform: none; }
 }
 
 .hero__subtitle {
